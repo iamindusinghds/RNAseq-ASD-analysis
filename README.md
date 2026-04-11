@@ -15,6 +15,20 @@ This project performs RNA-seq analysis on ASD datasets to identify differentiall
 * Differential expression analysis using DESeq2
 * Batch effect correction using ComBat-seq
 
+  ## Methods / Analysis Pipeline
+
+1. Loaded raw RNA-seq count matrices  
+2. Performed gene ID mapping (Entrez → Ensembl)  
+3. Merged datasets from multiple studies  
+4. Created DESeq2 dataset with batch as covariate  
+5. Filtered low-expressed genes  
+6. Performed differential expression analysis  
+7. Applied batch effect correction using ComBat-seq  
+8. Validated batch correction using:
+   - PCA  
+   - Log2FC correlation  
+   - PVCA  
+
 ## Validation of Batch Correction
 
 * PCA before and after correction
@@ -43,11 +57,21 @@ This project performs RNA-seq analysis on ASD datasets to identify differentiall
 
 ![PVCA](results/plots/PVCA_plot.png)
 
+## Biological Interpretation
+
+The analysis identified differentially expressed genes potentially associated with neurodevelopmental and regulatory pathways in ASD. The results suggest involvement of both coding and non-coding RNAs, highlighting possible avenues for functional studies and drug targeting.
+
 ## Key Findings
 
 * Identified significant DEGs (FDR < 0.05, |log2FC| > 0.5)
 * Successfully removed batch effects while preserving biological signals
 * Observed involvement of coding and non-coding RNAs
+
+## Limitations
+
+- Analysis is based on publicly available datasets  
+- Limited sample size across studies  
+- Functional validation not performed  
 
 ## Tools Used
 
