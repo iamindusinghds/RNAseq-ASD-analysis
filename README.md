@@ -15,7 +15,7 @@ This project performs RNA-seq analysis on ASD datasets to identify differentiall
 * Differential expression analysis using DESeq2
 * Batch effect correction using ComBat-seq
 
-  ## Methods / Analysis Pipeline
+ ## Methods / Analysis Pipeline
 
 1. Loaded raw RNA-seq count matrices  
 2. Performed gene ID mapping (Entrez → Ensembl)  
